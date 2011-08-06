@@ -1,0 +1,37 @@
+// Basic typographic rules and colors
+
+body, select, input, textarea
+  color $c-font-color
+
+h1, h2, h3
+  font-weight normal
+  text-shadow 0 1px 1px rgba(0,0,0,0.3)
+
+h1 
+  font-family $display-font-family
+  font-size(2.4)
+
+p, ol, ul, table
+  margin-bottom gap(1)
+  
+h1, h2, h3, h4, h5, h6
+  margin-bottom gap(0.5)
+
+h1
+  border-left gap(0.25) dotted $c-mid-cool
+  padding-left gap(0.5)
+
+a
+  color $c-link
+  border-bottom 1px dotted $c-link
+  text-decoration none
+  
+a:active
+  color $c-link-active
+
+a:visited
+  color $c-link-visited
+
+a:hover
+  color $c-link-hover
+  border-color $c-link-hover

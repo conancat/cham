@@ -1,0 +1,19 @@
+h1 Function test
+- if (typeof(chooseTest) != 'undefined')
+  p Choose test:
+  ul
+    li
+      a(href="/fn-test/sync") Synchronous Function Test
+    li
+      a(href="/fn-test/async") Asynchronous Function Test
+      
+  
+
+- else
+  p We have just ran a #{fnType}. Isn't that awesome?
+  
+  ul
+    li
+      a(href="/fn-test") Back to tests
+    li
+      a(href="/") Back to homepage

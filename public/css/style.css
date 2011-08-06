@@ -1,49 +1,3 @@
-h1,
-h2,
-h3 {
-  font-weight: normal;
-  text-shadow: 0 1px 1px rgba(0,0,0,0.3);
-}
-h1 {
-  font-family: "Shanti", sans-serif;
-}
-a {
-  color: #00717d;
-  text-decoration: none;
-  border: none;
-}
-a:active {
-  color: #00717d;
-}
-a:visited {
-  color: #00717d;
-}
-a:hover {
-  color: #a4a66a;
-}
-p,
-ol,
-ul,
-table {
-  margin: 21px 0;
-}
-header ul,
-footer ul,
-nav ul,
-header p,
-footer p,
-nav p {
-  margin: 0;
-  padding: 0;
-}
-nav li {
-  display: inline-block;
-  vertical-align: top;
-}
-.ie7 nav li {
-  display: inline;
-  zoom: 1;
-}
 html,
 body,
 div,
@@ -116,8 +70,6 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 1400px;
-  line-height: 1.5em;
   font: inherit;
   vertical-align: baseline;
 }
@@ -216,7 +168,7 @@ nav li {
   list-style-image: none;
 }
 small {
-  font-size: 1190px;
+  font-size: 1785px;
   line-height: 1.5em;
 }
 strong,
@@ -228,7 +180,7 @@ td {
 }
 sub,
 sup {
-  font-size: 1050px;
+  font-size: 1575px;
   line-height: 1.5em;
   line-height: 0;
   position: relative;
@@ -290,12 +242,12 @@ textarea:invalid {
   background-color: #f0dddd;
 }
 ::-moz-selection {
-  background: #ff5e99;
+  background: #ff9f8f;
   color: #fff;
   text-shadow: none;
 }
 ::selection {
-  background: #ff5e99;
+  background: #ff9f8f;
   color: #fff;
   text-shadow: none;
 }
@@ -308,28 +260,6 @@ button {
 }
 .ie7 img {
   -ms-interpolation-mode: bicubic;
-}
-body,
-select,
-input,
-textarea {
-  color: #444;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: bold;
-}
-a,
-a:active,
-a:visited {
-  color: #607890;
-}
-a:hover {
-  color: #036;
 }
 .ir {
   display: block;
@@ -377,6 +307,65 @@ a:hover {
 }
 .clearfix {
   zoom: 1;
+}
+body,
+select,
+input,
+textarea {
+  color: $c-font-color;
+}
+h1,
+h2,
+h3 {
+  font-weight: normal;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+}
+h1 {
+  font-family: "Helvetica", sans-serif;
+  font-size: 50.4px;
+  line-height: 1.5em;
+}
+p,
+ol,
+ul,
+table {
+  margin-bottom: 31.5px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 15.75px;
+}
+h1 {
+  border-left: 7.875px dotted #8d9e71;
+  padding-left: 15.75px;
+}
+a {
+  color: #8d9e71;
+  border-bottom: 1px dotted #8d9e71;
+  text-decoration: none;
+}
+a:active {
+  color: #8d9e71;
+}
+a:visited {
+  color: #8d9e71;
+}
+a:hover {
+  color: #ff9f8f;
+  border-color: #ff9f8f;
+}
+body {
+  font-size: 21px;
+  line-height: 1.5em;
+  font-family: "Georgia", serif;
+  background: #f9f0e0;
+  padding: 94.5px;
+  border-top: 31.5px solid #332822;
+  border-bottom: 15.75px solid #7f7e60;
 }
 @media all and (orientation:portrait) {
 }

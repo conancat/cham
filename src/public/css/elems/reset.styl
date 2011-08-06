@@ -3,8 +3,7 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
   margin: 0
   padding: 0
   border: 0
-  font-size: 100%
-  font: inherit
+  font inherit
   vertical-align: baseline
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
@@ -137,12 +136,12 @@ input:invalid, textarea:invalid
   background-color: #f0dddd
 
 ::-moz-selection
-  background: #FF5E99
+  background: $c-highlight
   color: #fff
   text-shadow: none
 
 ::selection
-  background: #FF5E99
+  background: $c-highlight
   color: #fff
   text-shadow: none
 
@@ -155,15 +154,3 @@ button
 
 .ie7 img
   -ms-interpolation-mode: bicubic
-
-body, select, input, textarea
-  color: #444
-
-h1, h2, h3, h4, h5, h6
-  font-weight: bold
-
-a, a:active, a:visited
-  color: #607890
-
-a:hover
-  color: #036
