@@ -9,6 +9,49 @@ Quick boilerplate for setting up a basic Coffeescript driven app, with Stylus an
 * Check out the docs for each file at the `/docs` folder
 * Start hacking!
 
+## The Stack
+* [Coffeescript](https://github.com/jashkenas/coffee-script) by @jashkenas
+* [Express](https://github.com/visionmedia/express) by @visionmedia
+* [Jade](https://github.com/visionmedia/jade) by @visionmedia
+* [Stylus](https://github.com/learnboost/stylus) by @learnboost
+* [Vows](https://github.com/cloudhead/vows) by @cloudhead
+
+## File Structure
+* `app.js`: Main app file, run `node app.js` to start app
+* `public/`: Public folder, all front-end files go here
+  * `css`
+  * `images`
+  * `js`
+* `lib/`: All backend files go here
+* `test/`: Where all tests are. Currently uses [Vows](http://vowsjs.org/) as example
+* `views/`: Where all Jade templates are
+* `src/`: Source files, where all Coffeescript and Stylus file resides. The file structure within `src/` folder mirrors the root folder, saves time trying to hunt for files
+* `docs/`: [Docco](http://jashkenas.github.com/docco/) generated documentation files
+
+## Compiling Files
+There are a couple of helper functions defined within the `Cakefile`, which are: 
+
+    cake watch                # Watches all Coffeescript(JS) and Stylus(CSS) files
+    cake watchJS              # Watches all coffeescript files for changes
+    cake watchCSS             # Watches all CSS files for changes
+    cake compileJS            # Compiles all Coffeescript files into JS
+    cake test                 # Runs all tests
+    cake docs                 # Create documentation using Docco
+
+To run `Cakefile` remember to install `coffee-script` as a global module, 
+
+    npm install coffee-script -g
+    
+To compile the CSS you need to install `stylus` as a global module too in order to run the executable:
+  
+    npm install stylus -g
+    
+Then, at the root folder, just do 
+
+    cake watch
+    
+And magic happens! :)
+
 ## The idea behind
 I love Coffeescript. No doubt to that. So everytime I start a new project I find myself doing all the same steps over and over, creating folders, copying files, installing modules, setting up Cakefile tasks and all those trivial tasks. 
 
