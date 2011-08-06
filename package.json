@@ -1,9 +1,26 @@
 {
-    "name": "application-name"
-  , "version": "0.0.1"
-  , "private": true
-  , "dependencies": {
-      "express": "2.4.3"
-    , "jade": ">= 0.0.1"
+  "name": "cham",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "2.4.3",
+    "jade": ">= 0.0.1"
+  },
+  "devDependencies": {
+    "vows": ">= 0.5.9",
+    "stylus": ">= 0.13.9",
+    "coffee-script": ">= 1.1.2"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "author": "Grey Ang <conancat@gmail.com> (http://grey-ang.com)",
+  "description": "Boilerplate for quick Coffeescript driven app, backed by Jade and Stylus",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/conancat/cham.git"
+  },
+  "scripts": {
+    "test": "cake test"
   }
 }
