@@ -10,9 +10,10 @@
 # always return callback(null), else use callback(null, 'function result')
 
 setup = (callback) ->
-  # Insert function for setting up your test stubs
-  # Then use callback(null) to return the result of the process
-  # Or callback(err) if error occurs, see teardown()
+  # Insert function for setting up your test stubs. 
+  #
+  # Then use callback(null) to return the result of the process,
+  # or callback(err) if error occurs, see teardown()
   
   setTimeout((->callback(null)), 100)
   
@@ -25,9 +26,10 @@ setup = (callback) ->
 #       callback(err)
 #
 teardown = (callback) ->
-  # Insert function for tearing down your test stubs
-  # Then use callback(null) to return the result of the process
-  # Or callback(err) if error occurs
+  # Insert function for tearing down your test stubs.
+  #
+  # Then use callback(null) to return the result of the process,
+  # or callback(err) if error occurs
   
   setTimeout((->callback('example error')), 200)
   

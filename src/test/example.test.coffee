@@ -1,11 +1,13 @@
-# For more information about Vows, do check out [http://vowsjs.org/](http://vowsjs.org/)
+# For more information about Vows, do check out [http://vowsjs.org/](http://vowsjs.org/).
+#
+# To run tests, type `cake test` at the root directory.
 
 # Module requires
 vows = require 'vows'
 assert = require 'assert'
 
 # Require helper functions
-{setup, teardown} = require './helpers'
+{setup, teardown} = require './testHelpers'
   
 # ### Batch for setup function
 vowsSetup =

@@ -2,7 +2,7 @@
   var assert, firstBatch, setup, teardown, testSuite, vows, vowsSetup, vowsTeardown, _ref;
   vows = require('vows');
   assert = require('assert');
-  _ref = require('./helpers'), setup = _ref.setup, teardown = _ref.teardown;
+  _ref = require('./testHelpers'), setup = _ref.setup, teardown = _ref.teardown;
   vowsSetup = {
     "...Setting up stubs...": {
       topic: function() {
