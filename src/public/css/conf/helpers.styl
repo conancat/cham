@@ -1,0 +1,46 @@
+gap($multiplier)
+  return $base-gap * $multiplier
+
+inline-block($vertical-align=top)
+  display inline-block
+  vertical-align $vertical-align
+  .ie7 &
+    display inline
+    zoom 1
+    
+// Calculate new line-height based on vertical rhythm
+font-size($size-multiplier, $set-line-height=true)
+  $font-size = unit($base-font-size * $size-multiplier, 'px')
+  font-size $font-size
+  if $set-line-height
+    line-height unit($base-line-height / $font-size, 'em')
+  
+// Image path helper
+path($image-name)
+  return $images +'/'+ $image-name
+
+// Helper to set background image
+image($image-name, $args)
+  background: url(path($image-name)) $args
+  
+// Helper for font replacement
+replace-text($image-name, $display=block)
+  image($image-name, no-repeat center)
+  display $display
+  
+  $size = image-size(path($image-name))
+  width $size[0]
+  height $size[1]
+  
+  text-indent -9999px
+  border none
+
+// Mixin for hiding text from showing
+hide-text()
+  absolute(top -9999px left -9999px)
+
+// Create transparent background
+// trans($alpha=0.5, $bg-color=#000)
+// Requires Nib
+trans($alpha=0.5, $bg-color=#000)
+  linear-gradient-image(1px top, rgba($bg-color, $alpha), rgba($bg-color, $alpha))

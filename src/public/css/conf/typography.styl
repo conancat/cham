@@ -1,0 +1,31 @@
+h1, h2, h3
+  font-weight normal
+  text-shadow 0 1px 1px rgba(0,0,0,0.3)
+
+h1 
+  font-family $display-font-family
+
+a
+  color $link-color
+  text-decoration none
+  $base-link-style()
+  &:active 
+    color $link-active-color
+  &:visited 
+    color $link-visited-color
+  &:hover 
+    color $link-hover-color
+
+p, ol, ul, table
+  margin $base-gap 0
+  
+header, footer, nav
+  ul, p
+    margin 0
+    padding 0
+  
+nav
+  h1
+    hide-text()
+  li
+    inline-block()
