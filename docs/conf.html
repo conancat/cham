@@ -1,0 +1,23 @@
+<!DOCTYPE html>  <html> <head>   <title>conf.coffee</title>   <meta http-equiv="content-type" content="text/html; charset=UTF-8">   <link rel="stylesheet" media="all" href="docco.css" /> </head> <body>   <div id="container">     <div id="background"></div>            <div id="jump_to">         Jump To &hellip;         <div id="jump_wrapper">           <div id="jump_page">                                           <a class="source" href="conf.html">                 conf.coffee               </a>                                           <a class="source" href="helpers.html">                 helpers.coffee               </a>                                           <a class="source" href="module.html">                 module.coffee               </a>                                           <a class="source" href="routes.html">                 routes.coffee               </a>                        </div>         </div>       </div>          <table cellpadding="0" cellspacing="0">       <thead>         <tr>           <th class="docs">             <h1>               conf.coffee             </h1>           </th>           <th class="code">           </th>         </tr>       </thead>       <tbody>                               <tr id="section-1">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-1">&#182;</a>               </div>               <p>Module requires</p>             </td>             <td class="code">               <div class="highlight"><pre><span class="p">{</span><span class="nx">extend</span><span class="p">}</span> <span class="o">=</span> <span class="nx">require</span> <span class="s1">&#39;./helpers&#39;</span></pre></div>             </td>           </tr>                               <tr id="section-2">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-2">&#182;</a>               </div>               <h2>Configurations</h2>
+
+<p>Configurations can be anything that you want to keep centralized, over here we are 
+using some trival values as examples but well, for demonstration purposes. :) 
+This can be helpful as you can define different values based on environment, 
+such as database names, oAuth application details, or even something as simple as the 
+title of the page.</p>             </td>             <td class="code">               <div class="highlight"><pre><span class="nv">global = </span>
+  <span class="nv">dir:</span>
+    <span class="nv">views: </span><span class="s1">&#39;/views&#39;</span>
+    <span class="nv">public: </span><span class="s1">&#39;/public&#39;</span>
+
+<span class="nv">development = </span>
+  <span class="nv">sessionSecret: </span><span class="s1">&#39;nyancat&#39;</span>
+
+<span class="nv">production = </span>
+  <span class="nv">sessionSecret: </span><span class="s1">&#39;nyannyannyan&#39;</span>
+  </pre></div>             </td>           </tr>                               <tr id="section-3">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-3">&#182;</a>               </div>               <h2>Export Module</h2>
+
+<p>Export module configurations based on environment</p>             </td>             <td class="code">               <div class="highlight"><pre><span class="k">switch</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;../app&#39;</span><span class="p">).</span><span class="nx">settings</span><span class="p">.</span><span class="nx">env</span>
+  <span class="k">when</span> <span class="s1">&#39;development&#39;</span> <span class="k">then</span> <span class="nv">module.exports = </span><span class="nx">extend</span><span class="p">(</span><span class="nx">global</span><span class="p">,</span> <span class="nx">development</span><span class="p">)</span>
+  <span class="k">when</span> <span class="s1">&#39;production&#39;</span> <span class="k">then</span> <span class="nv">module.exports = </span><span class="nx">extend</span><span class="p">(</span><span class="nx">global</span><span class="p">,</span> <span class="nx">production</span><span class="p">)</span>
+
+</pre></div>             </td>           </tr>                </tbody>     </table>   </div> </body> </html> 
